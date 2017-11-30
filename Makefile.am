@@ -4,9 +4,5 @@ CFLAGS = -Wall -pedantic
 include_HEADERS = bbexample.h
 
 lib_LTLIBRARIES = libbbexample.la
-libbbexample_la_SOURCES  = bbexamplelib.c
-libbbexample_la_LDFLAGS= -version-info 1:0:0
-
-bin_PROGRAMS = bbexample
-bbexample_SOURCES = bbexample.c
-bbexample_LDADD = .libs/libbbexample.la
+libbbexample_la_SOURCES  = foo.c tp.c
+libbbexample_la_LDFLAGS = -llttng-ust -version-info 1:0:0

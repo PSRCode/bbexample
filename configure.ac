@@ -2,8 +2,8 @@
 # Process this file with autoconf to produce a configure script.
 
 #AC_PREREQ(2.60)
-AC_INIT(bbexample, 0.1, ajlennon@dynamicdevices.co.uk)
-AC_CONFIG_SRCDIR([bbexample.c])
+AC_INIT(efficios-demo, 0.1, joraj@efficios.com)
+AC_CONFIG_SRCDIR([./])
 AC_CONFIG_HEADER([config.h])
 AM_INIT_AUTOMAKE(bbexample, main)
 
@@ -24,6 +24,8 @@ AC_ENABLE_SHARED
 # Checks for typedefs, structures, and compiler characteristics.
 
 # Checks for library functions.
+
+AC_CHECK_LIB([lttng-ust], [ltt_probe_register])
 
 #AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_FILES([Makefile])
